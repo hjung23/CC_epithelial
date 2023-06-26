@@ -1,0 +1,7 @@
+#Venn Diagram Ext. Data Figure 4
+
+chitin2<-chitin_PBS_DEG_WT_lo[!is.na(chitin_PBS_DEG_WT_lo==""),]
+chitin1<-list(flu=flu_naive_DEG_WT_lo, chitin=chitin_flu_DEG_WT_lo)
+list_y<-c(chitin$chitin)
+list_x<-c(chitin$flu)
+venn.diagram(x = list(flu1,chitin2), category.names = c("Flu_vs_Naive" , "Chitin_vs_PBS"), filename = 'FLU_vs_Chitin_WT_lo_DEG.png', output=TRUE, imagetype="png" , height = 480 , width = 480 , resolution = 300, compression = "lzw", lwd = 1, lty = 'blank', fill = c("red","yellow"), cex = .3, fontface = "bold", fontfamily = "sans", cat.cex = 0.3, cat.fontface = "bold", cat.default.pos = "outer", cat.pos = c(-27, 10), cat.dist = c(0.055, 0.055),  cat.fontfamily = "sans")
